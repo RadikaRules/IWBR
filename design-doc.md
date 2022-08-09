@@ -47,17 +47,18 @@
 ### Attacks
 - Throwing briefcase in patterns
 - Foot tapping that spawns vertical projectile spikes
-- Spawning 'Contract' enemies
+- Spawning 'Contract' enemies from briefcase
 - Drunken, Wario-like dash
 ## Clownkey
 - Monkey with clown emoji face
 ### Attacks
 - TBD
-## Mixmaster 9000
-- Cartoon depiction of a DJ mixed with HAL 9000
+## DJ Professor X
+- JSR's DJ Professor K meets the DJ from Samurai Jack's 'Jack and the Rave'
 ### Attacks
 - Visible sound waves from speakers in patterns
 - CD projectiles (Horizontal ones can be jumped on)
+- Glowing rave zombies
 - Stage lights
 ## Xero & Motor-Head
 ### Attacks
@@ -67,3 +68,12 @@
 ### Attacks
 - Mini black holes in patterns
 - Attacks from previous bosses
+
+#Post-base game plans
+## Newgrounds Medals/In-game achievements
+Grump It - Skip the tutorial
+The Magic Pixel(s) - Click on the moon on the title screen (SECRET)
+Die, you capitalist pig! - Beat The Suit
+No monkey business - Beat Clownkey
+X-Man to the 10th degree - Beat DJ Professor X
+WALL STUCK - Get stuck inside a wall
