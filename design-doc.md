@@ -1,4 +1,10 @@
-# Design Document
+# Design Document  
+# Development plan/General
+- Create basic graphics assets
+- Write initial code
+- Make a test/tutorial level
+- Extensibly prototype that build to match IWBtG feel
+- Include version number in title screen
 # Gameplay/Mechanics
 ### 'Suicide' reset button
 - Plays death jingle
@@ -10,7 +16,7 @@
 - Used by pressing Down+Jump/assigned button
 ### Grenade
 - Used by pressing Up+Attack/assigned button
-- Button can be held to "cook" it
+- Button can be held to throw farther
 - Requires ammo
 ## Mega Man-like stage select
 - Must have 8 bosses
@@ -24,12 +30,11 @@
 - Main weapon is throwable sword (4 directions)
 - Short range
 - High damage
-- Low jump
-- Triple jump
+- High, single jump
 - Can float if jump is held
 - Fast, short slide
 - 20 Grenade max
-- Grenades do less damage, bigger explosion
+- Grenades do less damage, longer throw range
 # Objects, hazards
 - Save box
 - Fake save box
@@ -69,11 +74,23 @@
 - Mini black holes in patterns
 - Attacks from previous bosses
 
-#Post-base game plans
+#Post-base game features
+- Character switching: Instantly change character by shooting a C-labeled block
+- Per-character + secret ending
+- New Game Plus
+- Difficulty modes
 ## Newgrounds Medals/In-game achievements
-Grump It - Skip the tutorial
-The Magic Pixel(s) - Click on the moon on the title screen (SECRET)
-Die, you capitalist pig! - Beat The Suit
-No monkey business - Beat Clownkey
-X-Man to the 10th degree - Beat DJ Professor X
-WALL STUCK - Get stuck inside a wall
+- First Blood - Die on the tutorial level
+- Grump It - Skip the tutorial level
+- Die, You Capitalist Pig! - Beat The Suit
+- No Monkey Business - Beat Clownkey
+- X-Man To The 10th Degree - Beat DJ Professor X
+- Xero Motor Skill - Beat Xero & Motor-Head
+- Not-So-Rad - Beat Radika
+- Jess Queen - Beat game with Jess
+- Great Dex-terity - Beat game with Dex
+- WALL STUCK - Get stuck inside a wall
+### Secret medals/in-game achievements
+- The Magic Pixel(s) - Click on the moon on the title screen
+- Mystery Chip 1/8 - You found it! But what does it do?
+- The End...? - Secret ending
