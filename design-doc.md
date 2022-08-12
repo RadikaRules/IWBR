@@ -13,12 +13,13 @@
 ## Character skills
 - Explained in tutorial level
 ### Slide
-- Used by pressing Down+Jump/assigned button
+- Used by pressing assigned button
 ### Grenade
-- Used by pressing Up+Attack/assigned button
+- Used by pressing assigned button
 - Button can be held to throw farther
 - Requires ammo
 ## Mega Man-like stage select
+- Only intended as a gag/reference
 - Must have 8 bosses
 - Final stage opens post-boss completion
 ### Player1 (Jessie)
@@ -26,7 +27,7 @@
 - Average slide
 - 15 Grenade max
 - Higher damage than regular shot
-### Player2 (Dex)
+### Player2 (Slater)
 - Main weapon is throwable sword (4 directions)
 - Short range
 - High damage
@@ -65,7 +66,7 @@
 - CD projectiles (Horizontal ones can be jumped on)
 - Glowing rave zombies
 - Stage lights
-## Xero & Motor-Head
+## Xero & Dex
 ### Attacks
 - Mimicks player characters
 
@@ -75,20 +76,24 @@
 - Attacks from previous bosses
 
 #Post-base game features
-- Character switching: Instantly change character by shooting a C-labeled block
-- Per-character + secret ending
+## Character switching
+- Change character by shooting a C-labeled block
+- Prompts asking if they want to switch + portraits
+---
+
+- Per-character ending + secret ending
 - New Game Plus
 - Difficulty modes
 ## Newgrounds Medals/In-game achievements
-- First Blood - Die on the tutorial level
+- Prepare to Die - Die on the tutorial level
 - Grump It - Skip the tutorial level
 - Die, You Capitalist Pig! - Beat The Suit
 - No Monkey Business - Beat Clownkey
 - X-Man To The 10th Degree - Beat DJ Professor X
-- Xero Motor Skill - Beat Xero & Motor-Head
+- Xero Motor Skill - Beat Xero & Dex
 - Not-So-Rad - Beat Radika
 - Jess Queen - Beat game with Jess
-- Great Dex-terity - Beat game with Dex
+- Great Dex-terity - Beat game with Slater
 - WALL STUCK - Get stuck inside a wall
 ### Secret medals/in-game achievements
 - The Magic Pixel(s) - Click on the moon on the title screen
