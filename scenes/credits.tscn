@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dobse8amnn3px"]
+
+[sub_resource type="SystemFont" id="SystemFont_w0sn3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="text-credits" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 191.0
+offset_right = 573.0
+offset_bottom = 544.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = SubResource("SystemFont_w0sn3")
+theme_override_font_sizes/normal_font_size = 16
+text = "These are credits,  hi"

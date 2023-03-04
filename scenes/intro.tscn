@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://6pwbngcjrf42"]
+
+[ext_resource type="Texture2D" uid="uid://cplkx6emtpg51" path="res://gfx/gfx-title.png" id="1_knhme"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(397, 303)
+scale = Vector2(55.1406, 39.6875)
+texture = ExtResource("1_knhme")
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
