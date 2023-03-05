@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://jbawmbd8otpr"]
+
+[sub_resource type="SystemFont" id="SystemFont_lqpci"]
+
+[resource]
+Button/fonts/font = SubResource("SystemFont_lqpci")

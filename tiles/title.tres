@@ -1,0 +1,16 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://v2ucuetei7de"]
+
+[ext_resource type="Texture2D" uid="uid://cplkx6emtpg51" path="res://gfx/gfx-title.png" id="1_iimso"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yaewb"]
+resource_name = "Title GFX"
+texture = ExtResource("1_iimso")
+2:0/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_yaewb")

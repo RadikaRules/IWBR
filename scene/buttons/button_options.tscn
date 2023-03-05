@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://7sqo0hivcqep"]
+
+[sub_resource type="Theme" id="Theme_bs28n"]
+
+[node name="options" type="Button"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -38.0
+offset_top = -141.0
+offset_right = 39.0
+offset_bottom = -103.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_bs28n")
+action_mode = 0
+keep_pressed_outside = true
+text = "Options"
+icon_alignment = 1

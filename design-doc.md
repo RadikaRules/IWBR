@@ -83,7 +83,7 @@
 
 - Per-character ending + secret ending
 - New Game Plus
-- Difficulty modes
+- Difficulty modes (Less checkpoints, 1CC mode called "The Kids Must Die")
 ## Newgrounds Medals/In-game achievements
 - Prepare to Die - Die on the tutorial level
 - Grump It - Skip the tutorial level
@@ -96,6 +96,7 @@
 - Great Dex-terity - Beat game with Slater
 - WALL STUCK - Get stuck inside a wall
 ### Secret medals/in-game achievements
-- The Magic Pixel(s) - Click on the moon on the title screen
+- The Moon Is Right - Click on the moon on the title screen
+- The Magic Pixel(s) - Click on the stars on the title screen (Konami code reference)
 - Mystery Chip 1/8 - You found it! But what does it do?
 - The End...? - Secret ending
