@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dy8m3mt4wvbo"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Theme" uid="uid://jbawmbd8otpr" path="res://resource/new_theme.tres" id="1_hme1g"]
-[ext_resource type="PackedScene" uid="uid://dowbqn4khu522" path="res://scenes/buttons/button_start.tscn" id="2_dks11"]
-[ext_resource type="PackedScene" uid="uid://7sqo0hivcqep" path="res://scenes/buttons/button_options.tscn" id="3_m3x4n"]
-[ext_resource type="PackedScene" uid="uid://dejwfy68d41rn" path="res://scenes/buttons/button_credits.tscn" id="4_dbajd"]
-[ext_resource type="PackedScene" uid="uid://cts6u56tevm35" path="res://scenes/buttons/button_exit.tscn" id="5_ia2l3"]
+[ext_resource type="PackedScene" uid="uid://dowbqn4khu522" path="res://scene/ui, hud/buttons/button_start.tscn" id="2_dks11"]
+[ext_resource type="PackedScene" uid="uid://7sqo0hivcqep" path="res://scene/ui, hud/buttons/button_options.tscn" id="3_m3x4n"]
+[ext_resource type="PackedScene" uid="uid://dejwfy68d41rn" path="res://scene/ui, hud/buttons/button_credits.tscn" id="4_dbajd"]
+[ext_resource type="PackedScene" uid="uid://cts6u56tevm35" path="res://scene/ui, hud/buttons/button_exit.tscn" id="5_ia2l3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

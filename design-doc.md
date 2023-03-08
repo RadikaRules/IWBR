@@ -6,10 +6,8 @@
 - Extensibly prototype that build to match IWBtG feel
 - Include version number in title screen
 # Gameplay/Mechanics
-### 'Suicide' reset button
-- Plays death jingle
-- Shows random quote from list
-- Prompts to reset to last save
+### Reset button
+- Reset to last save and load saved character coordinates
 ## Character skills
 - Explained in tutorial level
 ### Slide
@@ -55,10 +53,12 @@
 - Foot tapping that spawns vertical projectile spikes
 - Spawning 'Contract' enemies from briefcase
 - Drunken, Wario-like dash
+
 ## Clownkey
 - Monkey with clown emoji face
 ### Attacks
 - TBD
+
 ## DJ Professor X
 - JSR's DJ Professor K meets the DJ from Samurai Jack's 'Jack and the Rave'
 ### Attacks
@@ -66,11 +66,17 @@
 - CD projectiles (Horizontal ones can be jumped on)
 - Glowing rave zombies
 - Stage lights
+
 ## Xero & Dex
 ### Attacks
 - Mimicks player characters
 
+## Casie
+- Android OC who serves as Radika's second in command
+####
+
 ## Radika
+- Final boss and namesake of the game
 ### Attacks
 - Mini black holes in patterns
 - Attacks from previous bosses
@@ -87,13 +93,14 @@
 ## Newgrounds Medals/In-game achievements
 - Prepare to Die - Die on the tutorial level
 - Grump It - Skip the tutorial level
-- Die, You Capitalist Pig! - Beat The Suit
+- Coming Wittha Blast - Finish a boss with a grenade
+- Rage Against The Machine - Beat The Suit
 - No Monkey Business - Beat Clownkey
 - X-Man To The 10th Degree - Beat DJ Professor X
 - Xero Motor Skill - Beat Xero & Dex
 - Not-So-Rad - Beat Radika
 - Jess Queen - Beat game with Jess
-- Great Dex-terity - Beat game with Slater
+- L8r Sl8r - Beat game with Slater
 - WALL STUCK - Get stuck inside a wall
 ### Secret medals/in-game achievements
 - The Moon Is Right - Click on the moon on the title screen
