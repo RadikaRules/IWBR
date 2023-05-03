@@ -25,7 +25,7 @@
 - Average slide
 - 15 Grenade max
 - Higher damage than regular shot
-### Player2 (Slater)
+### Player2 (Ana)
 - Main weapon is throwable sword (4 directions)
 - Short range
 - High damage
@@ -36,6 +36,7 @@
 - Grenades do less damage, longer throw range
 # Objects, hazards
 - Save box
+- Orange
 - Fake save box
 - Grenade ammo box (Small, medium)
 - Lever, button
@@ -44,13 +45,16 @@
 - Spikes (H and V)
 - Projectile spikes (H and V)
 - Spike cannon
+- Car
+- Shipping container
+- Speed panel (Makes player slide along with increased H speed)
 
 # Bosses
 ## The Suit
 - Faceless business man with suit and red tie
 ### Attacks
 - Throwing briefcase in patterns
-- Foot tapping that spawns vertical projectile spikes
+- Foot tapping that spawns vertical spikes
 - Spawning 'Contract' enemies from briefcase
 - Drunken, Wario-like dash
 
@@ -72,14 +76,18 @@
 - Mimicks player characters
 
 ## Casie
-- Android OC who serves as Radika's second in command
-####
+- Android OC who serves as Radika's forced second in command
+### Attacks
+- Sliding
+Rapid shooting with Polaris guns in arc
+- Larger, wave pattern shots from arm cannons
 
 ## Radika
 - Final boss and namesake of the game
 ### Attacks
 - Mini black holes in patterns
 - Attacks from previous bosses
+- Gravity wells that slow the player
 
 #Post-base game features
 ## Character switching
@@ -100,10 +108,11 @@
 - Xero Motor Skill - Beat Xero & Dex
 - Not-So-Rad - Beat Radika
 - Jess Queen - Beat game with Jess
-- L8r Sl8r - Beat game with Slater
+- L8r Sl8r - Beat game with Ana
 - WALL STUCK - Get stuck inside a wall
+
 ### Secret medals/in-game achievements
-- The Moon Is Right - Click on the moon on the title screen
+- Look to La Luna - Click on the moon on the title screen
 - The Magic Pixel(s) - Click on the stars on the title screen (Konami code reference)
 - Mystery Chip 1/8 - You found it! But what does it do?
-- The End...? - Secret ending
+- The Last Story - Secret ending

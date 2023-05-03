@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3bwpf284hrpl"]
+[gd_scene load_steps=7 format=3 uid="uid://c3bwpf284hrpl"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_k6eye"]
 [ext_resource type="Texture2D" uid="uid://co1nw3oul4vjf" path="res://gfx/IWBR-Logo2.png" id="2_iyree"]
 [ext_resource type="TileSet" uid="uid://v2ucuetei7de" path="res://tiles/title.tres" id="3_52y45"]
 [ext_resource type="Texture2D" uid="uid://cplkx6emtpg51" path="res://gfx/gfx-title.png" id="3_oc3cq"]
+[ext_resource type="PackedScene" uid="uid://c680bg2gn7ery" path="res://scene/ui, hud/button_quit.tscn" id="4_dg01s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvtkj"]
 size = Vector2(33, 36)
@@ -83,9 +84,8 @@ text = "Start"
 layout_mode = 2
 text = "Credits"
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="Quit" parent="VBoxContainer" instance=ExtResource("4_dg01s")]
 layout_mode = 2
-text = "Quit"
 
 [node name="Moon" type="Sprite2D" parent="."]
 position = Vector2(743, 68)
@@ -101,4 +101,3 @@ shape = SubResource("RectangleShape2D_tvtkj")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

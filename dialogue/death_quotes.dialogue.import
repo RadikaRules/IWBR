@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dvoerno235al6"
+path="res://.godot/imported/death_quotes.dialogue-5ceac77ad2c077b70019c6765b7edf0b.tres"
+
+[deps]
+
+source_file="res://dialogue/death_quotes.dialogue"
+dest_files=["res://.godot/imported/death_quotes.dialogue-5ceac77ad2c077b70019c6765b7edf0b.tres"]
+
+[params]
+

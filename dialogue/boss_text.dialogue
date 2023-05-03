@@ -1,0 +1,17 @@
+~ boss1_intro
+
+Jess: So you're the one responsible for all this... [wait=1] Real piece of shit, you are
+The Suit: You'd be mistaken. I'm simply another cog in the machine.
+The Suit: Sorry kid, business is bus- [wait=0.8] [next=auto]
+Jess: Shut up and square up, I'm about to give YOU the business
+
+=> END
+
+~ boss1_end
+
+Jess: [shake rate=20 level=10]Die, you capitalist pig![/shake]
+
+=> END
+
+#Player2 lines begin below
+

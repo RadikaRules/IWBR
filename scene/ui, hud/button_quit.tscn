@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c680bg2gn7ery"]
+
+[sub_resource type="GDScript" id="GDScript_w1f1r"]
+resource_name = "button_quit"
+script/source = "extends Button
+
+# Quit game
+
+func _on_pressed():
+	get_tree().quit()
+"
+
+[node name="Quit" type="Button"]
+text = "Quit"
+script = SubResource("GDScript_w1f1r")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

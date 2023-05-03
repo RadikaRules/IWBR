@@ -1,0 +1,23 @@
+~ intro
+#Mega Man 2 reference
+
+: In the year 201X, two bold teenagers said to themselves "Life is too boring, I wanna be cool"
+And so, they went on an adventure to become... [wait=3] [next=auto]
+# Actual dialogue starts below this line
+Diana: Radikal!
+Jessie: What? No.[wait=1] That sounds so dumb,[wait=1.1] and 80s
+Diana: Tch, party pooper.
+Jessie: I'll poop your party alri- [wait=1.2] [next=auto]
+Diana: Jess what the fuck did you just say?
+Jessie: What?
+Diana: You just had to remind me of [shake rate=15 level=10]that[/shake] didn't you...
+Jessie: Sorry, didn't mean to
+Diana: All good, please just. [wait=0.8]Never again
+Jessie: Deal
+Diana: Like your name's Neil
+Jessie: What
+Diana: Gotcha!
+Both of them: *Laughter*
+Jessie: Oh Ana, you fuck...
+
+=> END

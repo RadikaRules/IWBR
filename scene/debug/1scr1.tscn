@@ -1,17 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://nr7f2sybu8c"]
+[gd_scene load_steps=7 format=3 uid="uid://dkvnquq4kqgii"]
 
 [ext_resource type="TileSet" uid="uid://bhtkia3q0alxv" path="res://tiles/level.tres" id="1_y1mi6"]
 [ext_resource type="TileSet" uid="uid://bi8glbqwh1pl5" path="res://tiles/sprites-gen.tres" id="2_1ps72"]
 [ext_resource type="Texture2D" uid="uid://dcfeu3khm3r4s" path="res://gfx/sprites-gen.png" id="3_f74a1"]
 [ext_resource type="Script" path="res://scene/debug/ScreenEdge.gd" id="4_8t4wp"]
-[ext_resource type="PackedScene" uid="uid://b8q8fp6h8fyi8" path="res://scene/chars/pl_1_jessie.tscn" id="5_6oxpp"]
+[ext_resource type="PackedScene" path="res://scene/chars/player1.tscn" id="5_6oxpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nlx4"]
 size = Vector2(45, 339)
 
 [node name="level-tutorial" type="Node2D"]
 
-[node name="Pl1_Jessie" parent="." instance=ExtResource("5_6oxpp")]
+[node name="Player1" parent="." instance=ExtResource("5_6oxpp")]
 position = Vector2(57, 542)
 
 [node name="Level" type="TileMap" parent="."]

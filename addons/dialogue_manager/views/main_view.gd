@@ -8,6 +8,11 @@ const DialogueSettings = preload("res://addons/dialogue_manager/components/setti
 const OPEN_OPEN = 100
 const OPEN_CLEAR = 101
 
+const TRANSLATIONS_GENERATE_LINE_IDS = 100
+const TRANSLATIONS_SAVE_CHARACTERS_TO_CSV = 201
+const TRANSLATIONS_SAVE_TO_CSV = 202
+const TRANSLATIONS_IMPORT_FROM_CSV = 203
+
 const ITEM_SAVE = 100
 const ITEM_SAVE_AS = 101
 const ITEM_CLOSE = 102
@@ -143,7 +148,8 @@ func _ready() -> void:
 	
 	save_all_button.disabled = true
 	
-	close_confirmation_dialog.add_button(DialogueConstants.translate("close_confirm.discard"), true, "discard")
+	close_confirmation_dialog.ok_button_text = DialogueConstants.translate("confirm_close.save")
+	close_confirmation_dialog.add_button(DialogueConstants.translate("confirm_close.discard"), true, "discard")
 	
 	settings_view.editor_plugin = editor_plugin
 	
@@ -250,11 +256,15 @@ func show_file_in_filesystem(path: String) -> void:
 
 # Save any open files
 func save_files() -> void:
+	var saved_files: PackedStringArray = []
 	for path in open_buffers:
+		if open_buffers[path].text != open_buffers[path].pristine_text:
+			saved_files.append(path)
 		save_file(path)
-		
+	
 	# Make sure we reimport/recompile the changes
-	editor_plugin.get_editor_interface().get_resource_filesystem().scan()
+	if saved_files.size() > 0:
+		editor_plugin.get_editor_interface().get_resource_filesystem().reimport_files(saved_files)
 	save_all_button.disabled = true
 
 
@@ -274,7 +284,7 @@ func save_file(path: String) -> void:
 	# Save the current text
 	var file: FileAccess = FileAccess.open(path, FileAccess.WRITE)
 	file.store_string(buffer.text)
-	file.flush()
+	file.close()
 
 
 func close_file(file: String) -> void:
@@ -306,22 +316,27 @@ func remove_file_from_open_buffers(file: String) -> void:
 # Apply theme colors and icons to the UI
 func apply_theme() -> void:
 	if is_instance_valid(editor_plugin) and is_instance_valid(code_edit):
+		var scale: float = editor_plugin.get_editor_interface().get_editor_scale()
 		var editor_settings = editor_plugin.get_editor_interface().get_editor_settings()
-		code_edit.colors = {
-			background = editor_settings.get_setting("text_editor/theme/highlighting/background_color"),
-			current_line = editor_settings.get_setting("text_editor/theme/highlighting/current_line_color"),
-			error_line = editor_settings.get_setting("text_editor/theme/highlighting/mark_color"),
+		code_edit.theme_overrides = {
+			scale = scale,
+			
+			background_color = editor_settings.get_setting("text_editor/theme/highlighting/background_color"),
+			current_line_color = editor_settings.get_setting("text_editor/theme/highlighting/current_line_color"),
+			error_line_color = editor_settings.get_setting("text_editor/theme/highlighting/mark_color"),
 		
-			titles = editor_settings.get_setting("text_editor/theme/highlighting/control_flow_keyword_color"),
-			text = editor_settings.get_setting("text_editor/theme/highlighting/text_color"),
-			conditions = editor_settings.get_setting("text_editor/theme/highlighting/keyword_color"),
-			mutations = editor_settings.get_setting("text_editor/theme/highlighting/function_color"),
-			members = editor_settings.get_setting("text_editor/theme/highlighting/member_variable_color"),
-			strings = editor_settings.get_setting("text_editor/theme/highlighting/string_color"),
-			numbers = editor_settings.get_setting("text_editor/theme/highlighting/number_color"),
-			symbols = editor_settings.get_setting("text_editor/theme/highlighting/symbol_color"),
-			comments = editor_settings.get_setting("text_editor/theme/highlighting/comment_color"),
-			jumps = Color(editor_settings.get_setting("text_editor/theme/highlighting/control_flow_keyword_color"), 0.7),
+			titles_color = editor_settings.get_setting("text_editor/theme/highlighting/control_flow_keyword_color"),
+			text_color = editor_settings.get_setting("text_editor/theme/highlighting/text_color"),
+			conditions_color = editor_settings.get_setting("text_editor/theme/highlighting/keyword_color"),
+			mutations_color = editor_settings.get_setting("text_editor/theme/highlighting/function_color"),
+			members_color = editor_settings.get_setting("text_editor/theme/highlighting/member_variable_color"),
+			strings_color = editor_settings.get_setting("text_editor/theme/highlighting/string_color"),
+			numbers_color = editor_settings.get_setting("text_editor/theme/highlighting/number_color"),
+			symbols_color = editor_settings.get_setting("text_editor/theme/highlighting/symbol_color"),
+			comments_color = editor_settings.get_setting("text_editor/theme/highlighting/comment_color"),
+			jumps_color = Color(editor_settings.get_setting("text_editor/theme/highlighting/control_flow_keyword_color"), 0.7),
+			
+			font_size = editor_settings.get_setting("interface/editor/code_font_size")
 		}
 		
 		new_button.icon = get_theme_icon("New", "EditorIcons")
@@ -375,14 +390,13 @@ func apply_theme() -> void:
 		# Set up the translations menu
 		popup = translations_button.get_popup()
 		popup.clear()
-		popup.add_icon_item(get_theme_icon("Translation", "EditorIcons"), DialogueConstants.translate("generate_line_ids"), 0)
+		popup.add_icon_item(get_theme_icon("Translation", "EditorIcons"), DialogueConstants.translate("generate_line_ids"), TRANSLATIONS_GENERATE_LINE_IDS)
 		popup.add_separator()
-		popup.add_icon_item(get_theme_icon("FileList", "EditorIcons"), DialogueConstants.translate("save_characters_to_csv"), 2)
-		popup.add_icon_item(get_theme_icon("FileList", "EditorIcons"), DialogueConstants.translate("save_to_csv"), 3)
-		popup.add_icon_item(get_theme_icon("AssetLib", "EditorIcons"), DialogueConstants.translate("import_from_csv"), 4)
+		popup.add_icon_item(get_theme_icon("FileList", "EditorIcons"), DialogueConstants.translate("save_characters_to_csv"), TRANSLATIONS_SAVE_CHARACTERS_TO_CSV)
+		popup.add_icon_item(get_theme_icon("FileList", "EditorIcons"), DialogueConstants.translate("save_to_csv"), TRANSLATIONS_SAVE_TO_CSV)
+		popup.add_icon_item(get_theme_icon("AssetLib", "EditorIcons"), DialogueConstants.translate("import_from_csv"), TRANSLATIONS_IMPORT_FROM_CSV)
 		
 		# Dialog sizes
-		var scale: float = editor_plugin.get_editor_interface().get_editor_scale()
 		new_dialog.min_size = Vector2(600, 500) * scale
 		save_dialog.min_size = Vector2(600, 500) * scale
 		open_dialog.min_size = Vector2(600, 500) * scale
@@ -567,7 +581,7 @@ func export_translations_to_csv(path: String) -> void:
 	for line in lines_to_save:
 		file.store_csv_line(line)
 	
-	file.flush()
+	file.close()
 	
 	editor_plugin.get_editor_interface().get_resource_filesystem().scan()
 	editor_plugin.get_editor_interface().get_file_system_dock().call_deferred("navigate_to_path", path)
@@ -629,7 +643,7 @@ func export_character_names_to_csv(path: String) -> void:
 	for line in lines_to_save:
 		file.store_csv_line(line)
 	
-	file.flush()
+	file.close()
 	
 	editor_plugin.get_editor_interface().get_resource_filesystem().scan()
 	editor_plugin.get_editor_interface().get_file_system_dock().call_deferred("navigate_to_path", path)
@@ -741,21 +755,40 @@ func _on_insert_button_menu_id_pressed(id: int) -> void:
 
 func _on_translations_button_menu_id_pressed(id: int) -> void:
 	match id:
-		0:
+		TRANSLATIONS_GENERATE_LINE_IDS:
 			generate_translations_keys()
-		1:
+			
+		TRANSLATIONS_SAVE_CHARACTERS_TO_CSV:
 			translation_source = TranslationSource.CharacterNames
 			export_dialog.filters = PackedStringArray(["*.csv ; Translation CSV"])
 			export_dialog.current_path = get_last_export_path("csv")
 			export_dialog.popup_centered()
-		2:
+			
+		TRANSLATIONS_SAVE_TO_CSV:
 			translation_source = TranslationSource.Lines
 			export_dialog.filters = PackedStringArray(["*.csv ; Translation CSV"])
 			export_dialog.current_path = get_last_export_path("csv")
 			export_dialog.popup_centered()
-		3:
+			
+		TRANSLATIONS_IMPORT_FROM_CSV:
 			import_dialog.current_path = get_last_export_path("csv")
 			import_dialog.popup_centered()
+
+
+func _on_export_dialog_file_selected(path: String) -> void:
+	DialogueSettings.set_user_value("last_export_path", path.get_base_dir())
+	match path.get_extension():
+		"csv":
+			match translation_source:
+				TranslationSource.CharacterNames:
+					export_character_names_to_csv(path)
+				TranslationSource.Lines:
+					export_translations_to_csv(path)
+
+
+func _on_import_dialog_file_selected(path: String) -> void:
+	DialogueSettings.set_user_value("last_export_path", path.get_base_dir())
+	import_translations_from_csv(path)
 
 
 func _on_main_view_theme_changed():
@@ -827,25 +860,10 @@ func _on_parse_timer_timeout() -> void:
 	parse()
 
 
-func _on_errors_panel_error_pressed(line_number: int) -> void:
+func _on_errors_panel_error_pressed(line_number: int, column_number: int) -> void:
 	code_edit.set_caret_line(line_number)
+	code_edit.set_caret_column(column_number)
 	code_edit.grab_focus()
-
-
-func _on_export_dialog_file_selected(path: String) -> void:
-	DialogueSettings.set_user_value("last_export_path", path.get_base_dir())
-	match path.get_extension():
-		"csv":
-			match translation_source:
-				TranslationSource.CharacterNames:
-					export_translations_to_csv(path)
-				TranslationSource.Lines:
-					export_character_names_to_csv(path)
-
-
-func _on_import_dialog_file_selected(path: String) -> void:
-	DialogueSettings.set_user_value("last_export_path", path.get_base_dir())
-	import_translations_from_csv(path)
 
 
 func _on_search_button_toggled(button_pressed: bool) -> void:
