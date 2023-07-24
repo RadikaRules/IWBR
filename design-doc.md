@@ -20,11 +20,15 @@
 - Only intended as a gag/reference
 - Must have 8 bosses
 - Final stage opens post-boss completion
+---
+
+# Playable characters
 ### Player1 (Jessie)
 - Average jump
 - Average slide
 - 15 Grenade max
 - Higher damage than regular shot
+
 ### Player2 (Ana)
 - Main weapon is throwable sword (4 directions)
 - Short range
@@ -34,6 +38,8 @@
 - Fast, short slide
 - 20 Grenade max
 - Grenades do less damage, longer throw range
+---
+
 # Objects, hazards
 - Save box
 - Orange
@@ -48,6 +54,7 @@
 - Car
 - Shipping container
 - Speed panel (Makes player slide along with increased H speed)
+---
 
 # Bosses
 ## The Suit
@@ -58,16 +65,18 @@
 - Spawning 'Contract' enemies from briefcase
 - Drunken, Wario-like dash
 
-## Clownkey
-- Monkey with clown emoji face
+## Xan
+- Robot with a CD Walkman D-E350 for a head
 ### Attacks
-- TBD
+- Extending punches and kicks
+- Fast dashing, sliding and wall climbing across stage
+- CD projectiles (Horizontal ones can be jumped on)
 
 ## DJ Professor X
 - JSR's DJ Professor K meets the DJ from Samurai Jack's 'Jack and the Rave'
 ### Attacks
 - Visible sound waves from speakers in patterns
-- CD projectiles (Horizontal ones can be jumped on)
+- CD projectiles like Xan
 - Glowing rave zombies
 - Stage lights
 
@@ -79,37 +88,47 @@
 - Android OC who serves as Radika's forced second in command
 ### Attacks
 - Sliding
-Rapid shooting with Polaris guns in arc
-- Larger, wave pattern shots from arm cannons
+- Rapid shooting with Polaris guns in arc
+- Larger, pattern shots from arm cannons
 
 ## Radika
 - Final boss and namesake of the game
 ### Attacks
 - Mini black holes in patterns
 - Attacks from previous bosses
+- Level hazards from past levels
 - Gravity wells that slow the player
+---
 
-#Post-base game features
+# Post-base game features
+- Mixie's Melon Boy OC as a playable skin
 ## Character switching
 - Change character by shooting a C-labeled block
 - Prompts asking if they want to switch + portraits
----
-
 - Per-character ending + secret ending
 - New Game Plus
-- Difficulty modes (Less checkpoints, 1CC mode called "The Kids Must Die")
+
+## Difficulty modes (Less checkpoints)
+- Tough It Out!
+- Balls Hard
+- Australian Extreme
+- 1CC mode "The Kids Must Die" (DMC3 reference)
+---
+
 ## Newgrounds Medals/In-game achievements
 - Prepare to Die - Die on the tutorial level
 - Grump It - Skip the tutorial level
+- Workplace Safety - Get crushed by a shipping container
+- WALL STUCK - Get stuck inside a wall
 - Coming Wittha Blast - Finish a boss with a grenade
 - Rage Against The Machine - Beat The Suit
-- No Monkey Business - Beat Clownkey
+- Enemies To Friends - Beat Xan and Casie but spare them
 - X-Man To The 10th Degree - Beat DJ Professor X
 - Xero Motor Skill - Beat Xero & Dex
 - Not-So-Rad - Beat Radika
 - Jess Queen - Beat game with Jess
 - L8r Sl8r - Beat game with Ana
-- WALL STUCK - Get stuck inside a wall
+- The Man Is Not Me - Unlock Xan
 
 ### Secret medals/in-game achievements
 - Look to La Luna - Click on the moon on the title screen
